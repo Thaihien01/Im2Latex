@@ -29,16 +29,16 @@ def main():
                         default=False, help="Use position embeddings or not")
     # training args
     parser.add_argument("--max_len", type=int,
-                        default=120, help="Max size of formula")
+                        default=100, help="Max size of formula")
     parser.add_argument("--dropout", type=float,
                         default=0., help="Dropout probility")
     parser.add_argument("--cuda", action='store_true',
                         default=True, help="Use cuda or not")
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--epoches", type=int, default=15)
-    parser.add_argument("--lr", type=float, default=2e-4,
+    parser.add_argument("--lr", type=float, default=3e-3,
                         help="Learning Rate")
-    parser.add_argument("--min_lr", type=float, default=2e-5,
+    parser.add_argument("--min_lr", type=float, default=3e-6,
                         help="Learning Rate")
     parser.add_argument("--sample_method", type=str, default="teacher_forcing",
                         choices=('teacher_forcing', 'exp', 'inv_sigmoid'),
